@@ -42,7 +42,7 @@ if "openai_model" not in st.session_state:
     st.session_state.openai_model = model #Set the OpenAI model to the model that we have initialized.
 
 # Set up our front end page
-st.set_page_config(page_title="FBLA Interactive Story Teller", page_icon=":books:")
+st.set_page_config(page_title="Reading Writing Tutor", page_icon=":books:")
 
 # ==== Function definitions etc ===== #
 # Function to upload the file to OpenAI
@@ -100,8 +100,9 @@ if not st.session_state.thread_id:
 st.session_state.start_chat = True
 
 # The main interface ...
-st.title("Interactive Story Teller")
-st.write("Let's write a story on a topic of your choice or on the topic your teacher has asked you to read.")
+st.title("Reading Writing Tutor")
+st.write("Let's improve our reading and writing skills for the upcoming Pennsylvania State Standards (PSSA) exam but in a fun way!") 
+st.write("Let's together write a story on a topic of your choice or on the topic your teacher has asked you to read. What topic would you like to write a story about? ")
 
 # Check sessions
 if st.session_state.start_chat:
@@ -165,8 +166,4 @@ if st.session_state.start_chat:
                 )
                 with st.chat_message("assistant"):
                     st.markdown(full_response, unsafe_allow_html=True)
-
-
-
-
 
