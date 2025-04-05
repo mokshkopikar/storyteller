@@ -100,7 +100,7 @@ if not st.session_state.thread_id:
 st.session_state.start_chat = True
 
 # The main interface ...
-st.title("Reading Writing Tutor")
+st.title("Interactive Story Teller")
 st.write("Let's improve our reading and writing skills for the upcoming Pennsylvania State Standards (PSSA) exam but in a fun way!") 
 st.write("Let's together write a story on a topic of your choice or on the topic your teacher has asked you to read. What topic would you like to write a story about? ")
 
