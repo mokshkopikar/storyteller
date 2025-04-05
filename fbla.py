@@ -70,11 +70,11 @@ if st.sidebar.button("Upload File"):
         file_upload_status = upload_to_openai(f"{file_uploaded.name}", client)
         #Append the file ID to the session state.
         st.session_state.file_id_list.append(file_upload_status)
-        st.sidebar.write(f"file_upload_status:: {file_upload_status}")
+        #st.sidebar.write(f"file_upload_status:: {file_upload_status}")
 
 # Display those file ids
 if st.session_state.file_id_list:
-    st.sidebar.write("Uploaded File IDs:")
+    #st.sidebar.write("Uploaded File IDs:")
     #Check if these files exist in the flie list.
     file_objects = client.files.list()
     if file_objects == None:
@@ -83,7 +83,7 @@ if st.session_state.file_id_list:
         for file_id in st.session_state.file_id_list:
             for file in file_objects:
                 if file.id == file_id:
-                    st.sidebar.write(f"File.id in Client: {file.id, file.filename}")
+                    #st.sidebar.write(f"File.id in Client: {file.id, file.filename}")
     # #Print the files in the st.session_state.file_id_list. 
     # # These should be the ones that are also attached to the OpenAI Client
     # for file_id in st.session_state.file_id_list:
