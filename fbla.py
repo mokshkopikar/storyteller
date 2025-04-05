@@ -83,7 +83,7 @@ if st.session_state.file_id_list:
         for file_id in st.session_state.file_id_list:
             for file in file_objects:
                 if file.id == file_id:
-                    #st.sidebar.write(f"File.id in Client: {file.id, file.filename}")
+                    st.sidebar.write(f"File.id in Client: {file.id, file.filename}")
     # #Print the files in the st.session_state.file_id_list. 
     # # These should be the ones that are also attached to the OpenAI Client
     # for file_id in st.session_state.file_id_list:
