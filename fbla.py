@@ -42,7 +42,7 @@ if "openai_model" not in st.session_state:
     st.session_state.openai_model = model #Set the OpenAI model to the model that we have initialized.
 
 # Set up our front end page
-st.set_page_config(page_title="Reading Writing Tutor", page_icon=":books:")
+st.set_page_config(page_title="Interactive Story Teller", page_icon=":books:")
 
 # ==== Function definitions etc ===== #
 # Function to upload the file to OpenAI
