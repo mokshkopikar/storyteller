@@ -103,7 +103,7 @@ def upload_file_to_vector_store(client, vector_store_id, filename):
         file_streams = [open(path, "rb") for path in file_paths]
         # # Use the upload and poll SDK helper to upload the files, add them to the vector store,
         # # and poll the status of the file batch for completion.
-        file_batch = client.beta.vector_stores.file_batches.upload_and_poll(
+        file_batch = client.vector_stores.file_batches.upload_and_poll(
             vector_store_id=vector_store_id, files=file_streams
         )
         #Get the File that was uploaded. 
