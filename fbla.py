@@ -42,7 +42,7 @@ if "openai_model" not in st.session_state:
     st.session_state.openai_model = model #Set the OpenAI model to the model that we have initialized.
 
 # Set up our front end page
-st.set_page_config(page_title="Interactive Story Teller", page_icon=":books:")
+st.set_page_config(page_title="Reading Writing Tutor", page_icon=":books:")
 
 # ==== Function definitions etc ===== #
 # Function to upload the file to OpenAI
@@ -56,7 +56,7 @@ def upload_to_openai(filepath, client):
 
 # === Sidebar - where users can upload files
 file_uploaded = st.sidebar.file_uploader(
-    "Upload content your teacher has asked you to read. We can create a story on that content", 
+    "Upload your PSSA ELA graded tests here", 
     key="file_upload"
 )
 
@@ -100,7 +100,7 @@ if not st.session_state.thread_id:
 st.session_state.start_chat = True
 
 # The main interface ...
-st.title("Interactive Story Teller")
+st.title("Reading Writing Tutor")
 st.write("Let's improve our reading and writing skills for the upcoming Pennsylvania State Standards (PSSA) exam but in a fun way!") 
 st.write("Let's together write a story on a topic of your choice or on the topic your teacher has asked you to read. What topic would you like to write a story about? ")
 
